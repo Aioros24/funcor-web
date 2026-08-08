@@ -29,16 +29,16 @@ export default function Contacto() {
   };
 
   return (
-    <section id="contacto" className="py-20 bg-slate-50">
+    <section id="contacto" className="py-20 bg-rose-50/10">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">
-            Contáctanos
+          <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-100">
+            Contacto
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
-            Ponte en contacto con nuestro equipo
+            Escríbenos o haz tu consulta
           </h2>
           <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
           <p className="text-slate-600 text-base leading-relaxed">
@@ -52,74 +52,72 @@ export default function Contacto() {
           {/* Left: Contact Info (5 cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-8 bg-brand-primary text-white p-8 md:p-10 rounded-3xl shadow-xl relative overflow-hidden">
             {/* Shapes */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-44 h-44 bg-blue-900 rounded-full blur-2xl opacity-50" />
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-44 h-44 bg-rose-950 rounded-full blur-2xl opacity-50" />
 
             <div className="relative z-10 space-y-6">
-              <h3 className="text-2xl font-extrabold mb-4">Información de la Fundación</h3>
-              <p className="text-blue-100 text-sm leading-relaxed text-justify">
-                Estamos ubicados en Caracas, atendiendo a las comunidades del Distrito Capital y del interior con absoluto compromiso.
+              <h3 className="text-2xl font-extrabold mb-4 text-left">Información de la Fundación</h3>
+              <p className="text-rose-100 text-sm leading-relaxed text-justify">
+                Estamos en proceso de confirmación de nuestra sede física e información oficial de contacto. Puedes escribirnos tus dudas por el formulario de la derecha.
               </p>
 
               <div className="space-y-4 pt-4">
                 <div className="flex items-start gap-4 text-left">
                   <div className="bg-white/10 p-3 rounded-lg backdrop-blur-md">
-                    <MapPin size={20} className="text-rose-300" />
+                    <MapPin size={20} className="text-rose-200" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-rose-300">Sede Principal</h4>
-                    <p className="text-sm text-slate-200">Av. Principal de Las Mercedes, Caracas, Venezuela.</p>
+                    <h4 className="font-bold text-sm text-rose-200">Ubicación</h4>
+                    <p className="text-sm text-slate-100">Caracas, Venezuela. <br /><span className="text-xs text-rose-300 italic">(Sede por confirmar)</span></p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 text-left">
                   <div className="bg-white/10 p-3 rounded-lg backdrop-blur-md">
-                    <Phone size={20} className="text-rose-300" />
+                    <Phone size={20} className="text-rose-200" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-rose-300">Teléfono Directo</h4>
-                    <p className="text-sm text-slate-200">+58 (412) 555-0199</p>
+                    <h4 className="font-bold text-sm text-rose-200">Teléfono Directo</h4>
+                    <p className="text-sm text-slate-100 italic">[Teléfono por confirmar]</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 text-left">
                   <div className="bg-white/10 p-3 rounded-lg backdrop-blur-md">
-                    <Mail size={20} className="text-rose-300" />
+                    <Mail size={20} className="text-rose-200" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-rose-300">Correo Electrónico</h4>
-                    <p className="text-sm text-slate-200 break-all">info@fundacioncorazonhumanitario.org</p>
+                    <h4 className="font-bold text-sm text-rose-200">Correo Electrónico</h4>
+                    <p className="text-sm text-slate-100 italic">[Correo por confirmar]</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 pt-6 border-t border-blue-900">
-              <p className="text-xs text-blue-200 mb-3 text-left">O escríbenos directamente por WhatsApp:</p>
-              <a
-                href="https://wa.me/584125550199"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-full shadow-lg transition-transform hover:scale-103"
+            <div className="relative z-10 pt-6 border-t border-rose-900/30">
+              <p className="text-xs text-rose-200 mb-3 text-left">Contacto vía WhatsApp:</p>
+              <div
+                className="w-full inline-flex items-center justify-center gap-2 bg-rose-500/50 text-white/70 font-semibold py-3.5 rounded-full cursor-not-allowed border border-rose-400/20 text-sm"
+                title="Enlace de WhatsApp en espera de confirmación de número de teléfono oficial"
               >
-                <MessageSquare size={18} /> Chat de WhatsApp Activo
-              </a>
+                <MessageSquare size={18} /> Enlace por confirmar
+              </div>
             </div>
           </div>
 
           {/* Right: Contact Form (7 cols) */}
-          <div className="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl shadow-md border border-slate-200/50 flex flex-col justify-center">
+          <div className="lg:col-span-7 bg-white p-8 md:p-10 rounded-3xl shadow-md border border-rose-100/40 flex flex-col justify-center">
             {status === 'success' ? (
               <div className="text-center py-12 space-y-4">
-                <div className="inline-flex items-center justify-center bg-emerald-100 p-4 rounded-full text-brand-accent animate-bounce">
+                <div className="inline-flex items-center justify-center bg-rose-100 p-4 rounded-full text-brand-secondary animate-bounce">
                   <CheckCircle2 size={48} />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-primary">¡Mensaje Enviado con Éxito!</h3>
                 <p className="text-slate-600 text-sm max-w-md mx-auto">
-                  Gracias por comunicarte con la Fundación Corazón Humanitario. Nuestro equipo de coordinación social revisará tu mensaje y se pondrá en contacto contigo en las próximas 24 horas.
+                  Gracias por comunicarte con la Fundación Corazón Humanitario. Este formulario funciona de manera simulada y el mensaje se procesa correctamente en la demostración visual.
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="mt-6 bg-brand-primary hover:bg-blue-800 text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors"
+                  className="mt-6 bg-brand-primary hover:bg-brand-secondary text-white font-bold text-sm px-6 py-2.5 rounded-full transition-colors"
                 >
                   Enviar otro mensaje
                 </button>
@@ -138,7 +136,7 @@ export default function Contacto() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Ej. Juan Pérez"
-                      className="bg-slate-50 border border-slate-200 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
+                      className="bg-slate-50 border border-rose-100 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
                     />
                   </div>
 
@@ -153,7 +151,7 @@ export default function Contacto() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Ej. juan@correo.com"
-                      className="bg-slate-50 border border-slate-200 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
+                      className="bg-slate-50 border border-rose-100 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
                     />
                   </div>
                 </div>
@@ -166,11 +164,9 @@ export default function Contacto() {
                     id="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-slate-50 border border-slate-200 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
+                    className="bg-slate-50 border border-rose-100 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800"
                   >
                     <option value="Donación / Voluntariado">Quiero Donar o ser Voluntario</option>
-                    <option value="Postular Comunidad">Postular una Comunidad</option>
-                    <option value="Alianza / Patrocinio">Alianzas y Patrocinios Corporativos</option>
                     <option value="Duda General">Preguntas / Dudas Generales</option>
                   </select>
                 </div>
@@ -186,7 +182,7 @@ export default function Contacto() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Cuéntanos en qué podemos ayudarte o cómo deseas colaborar..."
-                    className="bg-slate-50 border border-slate-200 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800 resize-none"
+                    className="bg-slate-50 border border-rose-100 focus:border-brand-secondary focus:bg-white focus:outline-none rounded-xl px-4 py-3 text-sm transition-colors text-slate-800 resize-none"
                   />
                 </div>
 
@@ -194,7 +190,7 @@ export default function Contacto() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-brand-secondary hover:bg-rose-600 disabled:bg-rose-400 text-white font-bold py-4 rounded-xl shadow-lg shadow-rose-200 transition-all duration-300 active:scale-98"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-brand-secondary hover:bg-brand-primary disabled:bg-rose-400 text-white font-bold py-4 rounded-xl shadow-lg shadow-pink-100 transition-all duration-300 active:scale-98"
                 >
                   {status === 'submitting' ? (
                     <span className="flex items-center gap-2">

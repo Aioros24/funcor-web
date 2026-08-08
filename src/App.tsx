@@ -2,14 +2,15 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Nosotros from './components/Nosotros';
 import Programas from './components/Programas';
-import Metricas from './components/Metricas';
+import Testimonios from './components/Testimonios';
+import Noticias from './components/Noticias';
 import Donaciones from './components/Donaciones';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-rose-500 selection:text-white">
+    <div className="min-h-screen bg-rose-50/5 text-slate-800 font-sans selection:bg-brand-secondary selection:text-white">
       {/* Header / Navegación */}
       <Header />
 
@@ -18,19 +19,22 @@ function App() {
         {/* Sección de Bienvenida (Hero) */}
         <Hero />
 
-        {/* Sección Quiénes Somos (Nosotros) */}
+        {/* Sección Sobre Nosotros */}
         <Nosotros />
 
-        {/* Sección de Ejes de Acción (Programas) */}
+        {/* Sección Qué Hacemos */}
         <Programas />
 
-        {/* Sección de Logros y Estadísticas (Métricas) */}
-        <Metricas />
+        {/* Sección Testimonios */}
+        <Testimonios />
 
-        {/* Sección de Financiamiento / Donativos (Donaciones) */}
+        {/* Sección Noticias */}
+        <Noticias />
+
+        {/* Sección Cómo Ayudar */}
         <Donaciones />
 
-        {/* Sección de Formulario de Contacto / Registro (Contacto) */}
+        {/* Sección Contacto */}
         <Contacto />
       </main>
 

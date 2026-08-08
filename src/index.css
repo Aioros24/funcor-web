@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #1e3a8a; /* Azul Profundo para confianza y profesionalismo */
-  --color-brand-secondary: #f43f5e; /* Coral/Rojo Suave para calidez y amor (Corazón) */
-  --color-brand-accent: #10b981; /* Verde Esperanza para crecimiento e impacto */
-  --color-brand-bg: #f8fafc; /* Fondo suave y limpio */
+  --color-brand-primary: #9d174d; /* Magenta Profundo para solidaridad, fuerza y humanidad */
+  --color-brand-secondary: #db2777; /* Rosa Cálido para el lazo rosado, corazón y empatía */
+  --color-brand-accent: #f472b6; /* Rosa Suave para esperanza y el nuevo renacer */
+  --color-brand-bg: #fffdfd; /* Fondo limpio y cálido en base a blanco */
 }
