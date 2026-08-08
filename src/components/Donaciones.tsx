@@ -1,0 +1,135 @@
+import { Heart, Landmark, Smartphone, DollarSign, ArrowRight, ShieldCheck } from 'lucide-react';
+
+export default function Donaciones() {
+  const donationMethods = [
+    {
+      icon: <Smartphone className="text-brand-secondary" size={28} />,
+      title: 'Pago Móvil (Venezuela)',
+      details: [
+        { label: 'Banco', val: 'Banco de Venezuela (0102)' },
+        { label: 'Teléfono', val: '+58 (412) 555-0199' },
+        { label: 'RIF', val: 'J-12345678-9' }
+      ]
+    },
+    {
+      icon: <Landmark className="text-blue-500" size={28} />,
+      title: 'Transferencia Bancaria Nacional',
+      details: [
+        { label: 'Banco', val: 'Banco de Venezuela' },
+        { label: 'Cuenta Corriente', val: '0102-0123-45-6789012345' },
+        { label: 'Beneficiario', val: 'Fundación Corazón Humanitario' }
+      ]
+    },
+    {
+      icon: <DollarSign className="text-emerald-500" size={28} />,
+      title: 'Donaciones Internacionales',
+      details: [
+        { label: 'Zelle', val: 'donaciones@fundacioncorazonhumanitario.org' },
+        { label: 'PayPal', val: 'paypal.me/funcorvenezuela' },
+        { label: 'Titular', val: 'Fundación Corazón Humanitario Inc.' }
+      ]
+    }
+  ];
+
+  return (
+    <section id="donaciones" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">
+            ¿Cómo Ayudar?
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+            Tu generosidad es la semilla del cambio
+          </h2>
+          <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
+          <p className="text-slate-600 text-base leading-relaxed">
+            Cada aporte, sin importar su tamaño, se traduce de manera inmediata en insumos médicos, comidas o útiles escolares para quienes lo necesitan en Venezuela. Ofrecemos múltiples vías transparentes y seguras para tu donación.
+          </p>
+        </div>
+
+        {/* Content Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mb-16">
+
+          {/* Donation Methods Cards (Left / 7 cols) */}
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            {donationMethods.map((method, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col sm:flex-row gap-5 items-start text-left hover:border-brand-secondary/30 transition-all duration-300 hover:shadow-md"
+              >
+                <div className="bg-white p-3.5 rounded-xl shadow-sm shrink-0">
+                  {method.icon}
+                </div>
+                <div className="w-full">
+                  <h3 className="font-extrabold text-lg text-brand-primary mb-3">
+                    {method.title}
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-1 gap-2 text-sm text-slate-600 bg-white p-4 rounded-xl border border-slate-200/40">
+                    {method.details.map((detail, dIdx) => (
+                      <div key={dIdx} className="flex flex-col sm:flex-row sm:justify-between border-b border-slate-100 last:border-none pb-1.5 last:pb-0">
+                        <span className="font-semibold text-slate-500 text-xs uppercase">{detail.label}:</span>
+                        <span className="font-medium text-slate-800 break-all sm:text-right">{detail.val}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action Box (Right / 5 cols) */}
+          <div className="lg:col-span-5 bg-gradient-to-br from-brand-secondary to-rose-600 rounded-3xl p-8 text-white flex flex-col justify-between text-left shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-44 h-44 bg-white/10 rounded-full blur-xl" />
+            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-44 h-44 bg-white/10 rounded-full blur-xl" />
+
+            <div className="relative z-10 space-y-6">
+              <div className="bg-white/20 p-3 rounded-2xl w-fit backdrop-blur-md">
+                <Heart className="text-white fill-white" size={28} />
+              </div>
+
+              <h3 className="text-2xl font-extrabold">¿Prefieres donar alimentos o ropa?</h3>
+
+              <p className="text-rose-100 text-sm leading-relaxed text-justify">
+                Si te encuentras en Caracas, recibimos donativos físicos de alimentos no perecederos, ropa en buen estado, calzado, juguetes y medicamentos vigentes.
+              </p>
+
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-2.5 text-xs bg-white/10 p-3 rounded-lg backdrop-blur-sm border border-white/10">
+                  <ShieldCheck size={18} className="text-rose-200 shrink-0" />
+                  <span>Se entrega constancia física o digital del donativo.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative z-10 pt-8 sm:pt-4">
+              <a
+                href="#contacto"
+                className="w-full inline-flex items-center justify-center gap-2 bg-white text-brand-secondary hover:bg-slate-50 font-bold px-6 py-4 rounded-full shadow-lg transition-transform hover:scale-103"
+              >
+                Coordinar Donativo Físico <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-6 text-left">
+          <div>
+            <h4 className="font-bold text-lg text-brand-primary mb-1">¿Quieres registrarte como patrocinador o voluntario recurrente?</h4>
+            <p className="text-sm text-slate-500">Haz la diferencia hoy mismo y sé parte del equipo que cambia realidades.</p>
+          </div>
+          <a
+            href="#contacto"
+            className="bg-brand-primary hover:bg-blue-800 text-white font-bold text-sm px-6 py-3.5 rounded-full shadow-md transition-colors whitespace-nowrap"
+          >
+            Unirme como Voluntario
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
