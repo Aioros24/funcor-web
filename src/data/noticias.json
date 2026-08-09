@@ -1,0 +1,33 @@
+{
+  "sectionTitle": "Noticias y Actualidad",
+  "sectionDesc": "Mantente al tanto de nuestras acciones, planificación de jornadas y las últimas actualizaciones institucionales de la fundación.",
+  "newsList": [
+    {
+      "title": "[Noticia por confirmar - Título de artículo institucional]",
+      "date": "[Fecha por confirmar]",
+      "author": "FUNCOR Prensa",
+      "excerpt": "[Espacio reservado para describir los eventos recientes de la fundación, como la planificación de jornadas sociales, inauguración de programas o hitos de solidaridad.]",
+      "content": "",
+      "image": "",
+      "tag": "Institucional"
+    },
+    {
+      "title": "[Noticia por confirmar - Planificación de jornadas de apoyo]",
+      "date": "[Fecha por confirmar]",
+      "author": "FUNCOR Prensa",
+      "excerpt": "[Detalles de las próximas entregas de insumos alimentarios o acompañamiento de bienestar familiar coordinadas en conjunto con nuestros valiosos voluntarios.]",
+      "content": "",
+      "image": "",
+      "tag": "Jornadas"
+    },
+    {
+      "title": "[Noticia por confirmar - Alianzas y redes de colaboración]",
+      "date": "[Fecha por confirmar]",
+      "author": "FUNCOR Prensa",
+      "excerpt": "[Información sobre la articulación de esfuerzos con aliados nacionales y colaboradores internacionales comprometidos con brindar un nuevo renacer en el país.]",
+      "content": "",
+      "image": "",
+      "tag": "Alianzas"
+    }
+  ]
+}

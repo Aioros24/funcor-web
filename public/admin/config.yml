@@ -1,0 +1,116 @@
+backend:
+  name: github
+  repo: Aioros24/funcor-web
+  branch: jules-7279241334177608037-bdd4b901
+  base_url: https://api.decapcms.org
+
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: "paginas"
+    label: "Páginas y Secciones"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "carousel"
+        label: "Carrusel de Portada"
+        file: "src/data/carousel.json"
+        fields:
+          - { label: "Diapositivas", name: "slides", widget: "list", fields: [
+              { label: "ID", name: "id", widget: "string" },
+              { label: "Fotografía de Portada", name: "image", widget: "image", required: false },
+              { label: "Título de la Diapositiva", name: "title", widget: "string" },
+              { label: "Texto Descriptivo", name: "description", widget: "text" },
+              { label: "Texto del Botón", name: "buttonText", widget: "string" },
+              { label: "Enlace del Botón", name: "buttonLink", widget: "string" },
+              { label: "Activo", name: "active", widget: "boolean", default: true }
+            ]}
+
+      - name: "nosotros"
+        label: "Sección Sobre Nosotros"
+        file: "src/data/nosotros.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción General", name: "description", widget: "text" },
+          - { label: "Misión - Título", name: "misionTitle", widget: "string" },
+          - { label: "Misión - Contenido", name: "misionContent", widget: "text" },
+          - { label: "Visión - Título", name: "visionTitle", widget: "string" },
+          - { label: "Visión - Contenido", name: "visionContent", widget: "text" },
+          - { label: "Título de Valores", name: "valuesTitle", widget: "string" },
+          - { label: "Lista de Valores", name: "valuesList", widget: "list", fields: [
+              { label: "Título del Valor", name: "title", widget: "string" },
+              { label: "Descripción del Valor", name: "desc", widget: "text" }
+            ]}
+
+      - name: "programas"
+        label: "Sección Qué Hacemos"
+        file: "src/data/programas.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción de la Sección", name: "sectionDesc", widget: "text" },
+          - { label: "Programas", name: "programsList", widget: "list", fields: [
+              { label: "Título del Programa", name: "title", widget: "string" },
+              { label: "Subtítulo", name: "subtitle", widget: "string" },
+              { label: "Descripción", name: "desc", widget: "text" },
+              { label: "Métrica o Placeholder de Impacto", name: "impact", widget: "string" }
+            ]}
+
+      - name: "testimonios"
+        label: "Sección Testimonios"
+        file: "src/data/testimonios.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción de la Sección", name: "sectionDesc", widget: "text" },
+          - { label: "Lista de Testimonios", name: "testimonialsList", widget: "list", fields: [
+              { label: "Relato del Testimonio", name: "text", widget: "text" },
+              { label: "Nombre (o Placeholder)", name: "name", widget: "string" },
+              { label: "Relación o Cargo", name: "relation", widget: "string" }
+            ]}
+
+      - name: "noticias"
+        label: "Sección Noticias"
+        file: "src/data/noticias.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción de la Sección", name: "sectionDesc", widget: "text" },
+          - { label: "Lista de Noticias", name: "newsList", widget: "list", fields: [
+              { label: "Título de la Noticia", name: "title", widget: "string" },
+              { label: "Fecha de Publicación", name: "date", widget: "string" },
+              { label: "Autor", name: "author", widget: "string" },
+              { label: "Extracto o Resumen", name: "excerpt", widget: "text" },
+              { label: "Contenido Completo", name: "content", widget: "text", required: false },
+              { label: "Fotografía de la Noticia", name: "image", widget: "image", required: false },
+              { label: "Etiqueta o Categoría", name: "tag", widget: "string" }
+            ]}
+
+      - name: "donaciones"
+        label: "Sección Cómo Ayudar"
+        file: "src/data/donaciones.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción de la Sección", name: "sectionDesc", widget: "text" },
+          - { label: "Título del Aviso Importante", name: "noticeTitle", widget: "string" },
+          - { label: "Contenido del Aviso", name: "noticeContent", widget: "text" },
+          - { label: "Lista de Métodos de Donación", name: "donationMethods", widget: "list", fields: [
+              { label: "Título del Método", name: "title", widget: "string" },
+              { label: "Detalles", name: "details", widget: "list", fields: [
+                  { label: "Etiqueta", name: "label", widget: "string" },
+                  { label: "Valor / Placeholder", name: "val", widget: "string" }
+                ]}
+            ]}
+
+      - name: "contacto"
+        label: "Sección Contacto"
+        file: "src/data/contacto.json"
+        fields:
+          - { label: "Título de la Sección", name: "sectionTitle", widget: "string" },
+          - { label: "Descripción de la Sección", name: "sectionDesc", widget: "text" },
+          - { label: "Descripción de la Tarjeta", name: "cardDesc", widget: "text" },
+          - { label: "Ubicación / Dirección", name: "location", widget: "string" },
+          - { label: "Dirección Detallada o Placeholder", name: "address", widget: "string" },
+          - { label: "Teléfono de Contacto", name: "phone", widget: "string" },
+          - { label: "Correo de Contacto", name: "email", widget: "string" },
+          - { label: "Enlace de WhatsApp", name: "whatsappLink", widget: "string", required: false },
+          - { label: "Enlace de Instagram", name: "instagramLink", widget: "string", required: false }

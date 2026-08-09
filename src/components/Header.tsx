@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Heart, Menu, X, Phone, Mail } from 'lucide-react';
+import contactoData from '../data/contacto.json';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +34,15 @@ export default function Header() {
       <div className="bg-brand-primary text-white text-xs py-1.5 px-4 hidden md:flex justify-between items-center border-b border-rose-900/30">
         <div className="flex items-center space-x-4">
           <span className="flex items-center gap-1.5">
-            <Phone size={12} className="text-brand-accent" /> Teléfono: <span className="font-semibold text-rose-100">[Teléfono por confirmar]</span>
+            <Phone size={12} className="text-brand-accent" /> Teléfono: <span className="font-semibold text-rose-100">{contactoData.phone}</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <Mail size={12} className="text-brand-accent" /> Correo: <span className="font-semibold text-rose-100">[Correo por confirmar]</span>
+            <Mail size={12} className="text-brand-accent" /> Correo: <span className="font-semibold text-rose-100">{contactoData.email}</span>
           </span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="flex items-center gap-1 font-semibold text-rose-200">
-            <Heart size={12} className="fill-brand-accent text-brand-accent" /> Caracas, Venezuela <span className="text-[10px] text-rose-300 font-normal">(Dirección por confirmar)</span>
+            <Heart size={12} className="fill-brand-accent text-brand-accent" /> {contactoData.location}
           </span>
         </div>
       </div>

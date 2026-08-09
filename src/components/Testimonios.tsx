@@ -1,24 +1,7 @@
 import { Quote, Heart } from 'lucide-react';
+import testimoniosData from '../data/testimonios.json';
 
 export default function Testimonios() {
-  const placeholders = [
-    {
-      text: '"[Testimonio de beneficiario en proceso de validación. Aquí se describirá el impacto positivo y el acompañamiento que recibió por parte de la fundación en su tratamiento o alimentación.]"',
-      name: '[Beneficiario por confirmar]',
-      relation: 'Madre de beneficiario de apoyo infantil'
-    },
-    {
-      text: '"[Testimonio de adulto mayor en proceso de validación. En este espacio se compartirá el relato del apoyo nutricional o la orientación de bienestar social proporcionada por el voluntariado.]"',
-      name: '[Adulto Mayor por confirmar]',
-      relation: 'Beneficiario del programa alimentario'
-    },
-    {
-      text: '"[Testimonio de voluntario o colaborador. Se detallará la experiencia y motivación humana que inspira a trabajar día a día con el corazón por un nuevo renacer en Venezuela.]"',
-      name: '[Voluntario por confirmar]',
-      relation: 'Voluntariado Comunitario'
-    }
-  ];
-
   return (
     <section id="testimonios" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -26,20 +9,20 @@ export default function Testimonios() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-100">
-            Testimonios
+            {testimoniosData.sectionTitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
             Historias que Inspiran Esperanza
           </h2>
           <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
           <p className="text-slate-600 text-base">
-            Voces y relatos de quienes forman parte de nuestro entorno. Cada testimonio representa el corazón de nuestra labor en proceso de documentación oficial.
+            {testimoniosData.sectionDesc}
           </p>
         </div>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {placeholders.map((item, idx) => (
+          {testimoniosData.testimonialsList.map((item, idx) => (
             <div
               key={idx}
               className="bg-rose-50/10 p-8 rounded-2xl border border-rose-100/40 relative flex flex-col justify-between text-left hover:shadow-xl hover:bg-rose-50/20 transition-all duration-300"

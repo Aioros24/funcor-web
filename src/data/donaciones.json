@@ -1,0 +1,32 @@
+{
+  "sectionTitle": "Cómo Ayudar",
+  "sectionDesc": "Cada aporte se traduce de manera inmediata en acompañamiento social, insumos y apoyo para quienes más lo necesitan en Venezuela. Ofrecemos una estructura moderna preparada para recibir tus aportaciones de forma segura una vez se validen los canales oficiales.",
+  "noticeTitle": "Cuentas y Métodos de Donación en Proceso de Confirmación",
+  "noticeContent": "Los datos bancarios, Pago Móvil y cuentas internacionales que se muestran a continuación son demostrativos. Los métodos oficiales de donación serán publicados e impresos de forma definitiva en esta sección tan pronto como la junta directiva de la Fundación Corazón Humanitario (FUNCOR) confirme y oficialice sus datos de cuenta.",
+  "donationMethods": [
+    {
+      "title": "Pago Móvil (Venezuela)",
+      "details": [
+        { "label": "Banco", "val": "[Banco por confirmar]" },
+        { "label": "Teléfono", "val": "[Número por confirmar]" },
+        { "label": "RIF", "val": "[RIF por confirmar]" }
+      ]
+    },
+    {
+      "title": "Transferencia Bancaria Nacional",
+      "details": [
+        { "label": "Banco", "val": "[Banco nacional por confirmar]" },
+        { "label": "Número de Cuenta", "val": "[Cuenta de 20 dígitos por confirmar]" },
+        { "label": "Beneficiario", "val": "Fundación Corazón Humanitario - Un Nuevo Renacer" }
+      ]
+    },
+    {
+      "title": "Donaciones Internacionales",
+      "details": [
+        { "label": "Zelle", "val": "[Correo de Zelle por confirmar]" },
+        { "label": "PayPal", "val": "[Enlace o correo de PayPal por confirmar]" },
+        { "label": "Titular", "val": "Fundación Corazón Humanitario" }
+      ]
+    }
+  ]
+}

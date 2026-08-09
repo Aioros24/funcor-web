@@ -1,0 +1,30 @@
+{
+  "sectionTitle": "Qué Hacemos",
+  "sectionDesc": "Cada una de nuestras actividades está orientada a aliviar la vulnerabilidad mediante soluciones de soporte social y acompañamiento humano responsable.",
+  "programsList": [
+    {
+      "title": "Alimentación y Nutrición",
+      "subtitle": "Apoyo Nutricional",
+      "desc": "Colaboramos en jornadas comunitarias de alimentación y canalización de insumos nutricionales para mitigar la vulnerabilidad en niños y adultos mayores.",
+      "impact": "[Cifra por confirmar - Impacto en proceso de registro]"
+    },
+    {
+      "title": "Acompañamiento en Salud",
+      "subtitle": "Orientación y Bienestar",
+      "desc": "Brindamos orientación básica de salud, acompañamiento social a personas enfermas y canalización para la donación de insumos básicos. Es un programa de apoyo humanitario complementario que no sustituye tratamientos médicos profesionales.",
+      "impact": "[Consultas y medicamentos por confirmar]"
+    },
+    {
+      "title": "Formación y Educación",
+      "subtitle": "Sembrando Conocimiento",
+      "desc": "Desarrollamos talleres de apoyo escolar, actividades recreativas para el fomento de valores y fortalecimiento de habilidades para incentivar el sano crecimiento.",
+      "impact": "[Beneficiarios por confirmar]"
+    },
+    {
+      "title": "Fortalecimiento Familiar",
+      "subtitle": "Solidaridad Familiar",
+      "desc": "Fomentamos el empoderamiento personal de padres y madres de familia en las comunidades mediante talleres informativos y apoyo grupal.",
+      "impact": "[Familias por confirmar]"
+    }
+  ]
+}

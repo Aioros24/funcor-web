@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send, Phone, Mail, MapPin, CheckCircle2, MessageSquare } from 'lucide-react';
+import contactoData from '../data/contacto.json';
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -35,14 +36,14 @@ export default function Contacto() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-100">
-            Contacto
+            {contactoData.sectionTitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
             Escríbenos o haz tu consulta
           </h2>
           <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
           <p className="text-slate-600 text-base leading-relaxed">
-            ¿Tienes dudas sobre cómo donar? ¿Quieres postularte como voluntario o registrar una comunidad necesitada? Escríbenos y te responderemos a la brevedad.
+            {contactoData.sectionDesc}
           </p>
         </div>
 
@@ -57,7 +58,7 @@ export default function Contacto() {
             <div className="relative z-10 space-y-6">
               <h3 className="text-2xl font-extrabold mb-4 text-left">Información de la Fundación</h3>
               <p className="text-rose-100 text-sm leading-relaxed text-justify">
-                Estamos en proceso de confirmación de nuestra sede física e información oficial de contacto. Puedes escribirnos tus dudas por el formulario de la derecha.
+                {contactoData.cardDesc}
               </p>
 
               <div className="space-y-4 pt-4">
@@ -67,7 +68,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-rose-200">Ubicación</h4>
-                    <p className="text-sm text-slate-100">Caracas, Venezuela. <br /><span className="text-xs text-rose-300 italic">(Sede por confirmar)</span></p>
+                    <p className="text-sm text-slate-100">{contactoData.address}</p>
                   </div>
                 </div>
 
@@ -77,7 +78,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-rose-200">Teléfono Directo</h4>
-                    <p className="text-sm text-slate-100 italic">[Teléfono por confirmar]</p>
+                    <p className="text-sm text-slate-100 italic">{contactoData.phone}</p>
                   </div>
                 </div>
 
@@ -87,7 +88,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-rose-200">Correo Electrónico</h4>
-                    <p className="text-sm text-slate-100 italic">[Correo por confirmar]</p>
+                    <p className="text-sm text-slate-100 italic break-all">{contactoData.email}</p>
                   </div>
                 </div>
               </div>
@@ -95,12 +96,23 @@ export default function Contacto() {
 
             <div className="relative z-10 pt-6 border-t border-rose-900/30">
               <p className="text-xs text-rose-200 mb-3 text-left">Contacto vía WhatsApp:</p>
-              <div
-                className="w-full inline-flex items-center justify-center gap-2 bg-rose-500/50 text-white/70 font-semibold py-3.5 rounded-full cursor-not-allowed border border-rose-400/20 text-sm"
-                title="Enlace de WhatsApp en espera de confirmación de número de teléfono oficial"
-              >
-                <MessageSquare size={18} /> Enlace por confirmar
-              </div>
+              {contactoData.whatsappLink ? (
+                <a
+                  href={contactoData.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-full shadow-lg transition-transform hover:scale-103 text-sm"
+                >
+                  <MessageSquare size={18} /> Chat de WhatsApp Activo
+                </a>
+              ) : (
+                <div
+                  className="w-full inline-flex items-center justify-center gap-2 bg-rose-500/50 text-white/70 font-semibold py-3.5 rounded-full cursor-not-allowed border border-rose-400/20 text-sm"
+                  title="Enlace de WhatsApp en espera de confirmación de número de teléfono oficial"
+                >
+                  <MessageSquare size={18} /> Enlace por confirmar
+                </div>
+              )}
             </div>
           </div>
 

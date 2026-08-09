@@ -1,35 +1,16 @@
 import { Heart, Landmark, Smartphone, DollarSign, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
+import donacionesData from '../data/donaciones.json';
 
 export default function Donaciones() {
-  const donationMethods = [
-    {
-      icon: <Smartphone className="text-brand-secondary" size={28} />,
-      title: 'Pago Móvil (Venezuela)',
-      details: [
-        { label: 'Banco', val: '[Banco por confirmar]' },
-        { label: 'Teléfono', val: '[Número por confirmar]' },
-        { label: 'RIF', val: '[RIF por confirmar]' }
-      ]
-    },
-    {
-      icon: <Landmark className="text-brand-secondary" size={28} />,
-      title: 'Transferencia Bancaria Nacional',
-      details: [
-        { label: 'Banco', val: '[Banco nacional por confirmar]' },
-        { label: 'Número de Cuenta', val: '[Cuenta de 20 dígitos por confirmar]' },
-        { label: 'Beneficiario', val: 'Fundación Corazón Humanitario - Un Nuevo Renacer' }
-      ]
-    },
-    {
-      icon: <DollarSign className="text-brand-secondary" size={28} />,
-      title: 'Donaciones Internacionales',
-      details: [
-        { label: 'Zelle', val: '[Correo de Zelle por confirmar]' },
-        { label: 'PayPal', val: '[Enlace o correo de PayPal por confirmar]' },
-        { label: 'Titular', val: 'Fundación Corazón Humanitario' }
-      ]
+  const getIcon = (title: string) => {
+    if (title.toLowerCase().includes('pago móvil')) {
+      return <Smartphone className="text-brand-secondary" size={28} />;
     }
-  ];
+    if (title.toLowerCase().includes('transferencia')) {
+      return <Landmark className="text-brand-secondary" size={28} />;
+    }
+    return <DollarSign className="text-brand-secondary" size={28} />;
+  };
 
   return (
     <section id="como-ayudar" className="py-20 bg-white">
@@ -38,14 +19,14 @@ export default function Donaciones() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-100">
-            Cómo Ayudar
+            {donacionesData.sectionTitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
             Tu generosidad es la semilla del cambio
           </h2>
           <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
           <p className="text-slate-600 text-base leading-relaxed text-justify md:text-center">
-            Cada aporte se traduce de manera inmediata en acompañamiento social, insumos y apoyo para quienes más lo necesitan en Venezuela. Ofrecemos una estructura moderna preparada para recibir tus aportaciones de forma segura una vez se validen los canales oficiales.
+            {donacionesData.sectionDesc}
           </p>
         </div>
 
@@ -55,9 +36,9 @@ export default function Donaciones() {
             <AlertCircle size={24} />
           </div>
           <div>
-            <h3 className="font-bold text-brand-primary text-base mb-1">Cuentas y Métodos de Donación en Proceso de Confirmación</h3>
+            <h3 className="font-bold text-brand-primary text-base mb-1">{donacionesData.noticeTitle}</h3>
             <p className="text-slate-600 text-sm leading-relaxed text-justify">
-              Los datos bancarios, Pago Móvil y cuentas internacionales que se muestran a continuación son demostrativos. <strong>Los métodos oficiales de donación serán publicados e impresos de forma definitiva en esta sección tan pronto como la junta directiva de la Fundación Corazón Humanitario (FUNCOR) confirme y oficialice sus datos de cuenta.</strong>
+              {donacionesData.noticeContent}
             </p>
           </div>
         </div>
@@ -67,13 +48,13 @@ export default function Donaciones() {
 
           {/* Donation Methods Cards (Left / 7 cols) */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            {donationMethods.map((method, index) => (
+            {donacionesData.donationMethods.map((method, index) => (
               <div
                 key={index}
                 className="bg-rose-50/10 p-6 rounded-2xl border border-rose-100/40 flex flex-col sm:flex-row gap-5 items-start text-left hover:border-brand-secondary/30 transition-all duration-300 hover:shadow-md"
               >
                 <div className="bg-white p-3.5 rounded-xl shadow-sm shrink-0 text-brand-secondary">
-                  {method.icon}
+                  {getIcon(method.title)}
                 </div>
                 <div className="w-full">
                   <h3 className="font-extrabold text-lg text-brand-primary mb-3">

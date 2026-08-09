@@ -1,4 +1,5 @@
-import { Heart, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { Heart, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import contactoData from '../data/contacto.json';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,15 +62,15 @@ export default function Footer() {
           </h4>
           <div className="flex items-start gap-2.5 text-sm">
             <MapPin className="text-brand-secondary shrink-0 mt-1" size={18} />
-            <span className="text-left">Caracas, Venezuela. <br /><span className="text-xs text-slate-500 italic">(Dirección física exacta por confirmar)</span></span>
+            <span className="text-left">{contactoData.address}</span>
           </div>
           <div className="flex items-center gap-2.5 text-sm">
             <Phone className="text-brand-secondary shrink-0" size={18} />
-            <span className="text-slate-400 font-semibold">[Teléfono por confirmar]</span>
+            <span className="text-slate-400 font-semibold">{contactoData.phone}</span>
           </div>
           <div className="flex items-center gap-2.5 text-sm">
             <Mail className="text-brand-secondary shrink-0" size={18} />
-            <span className="text-slate-400 font-semibold break-all">[Correo por confirmar]</span>
+            <span className="text-slate-400 font-semibold break-all">{contactoData.email}</span>
           </div>
         </div>
 
@@ -82,18 +83,47 @@ export default function Footer() {
             Acompáñanos y sigue la labor diaria de nuestra fundación. <span className="text-xs text-slate-500 block italic mt-1">(Enlaces oficiales por confirmar)</span>
           </p>
           <div className="flex items-center gap-3">
-            {/* Instagram placeholder link */}
-            <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="Enlace por confirmar">
-              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-              </svg>
-            </span>
-            {/* WhatsApp placeholder link */}
-            <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="Enlace por confirmar">
-              <MessageSquare size={20} />
-            </span>
+            {/* Instagram link */}
+            {contactoData.instagramLink ? (
+              <a
+                href={contactoData.instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-slate-800 hover:bg-gradient-to-tr hover:from-yellow-500 hover:via-pink-500 hover:to-purple-600 p-2.5 rounded-full text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-115 flex items-center justify-center"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+            ) : (
+              <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="Instagram por confirmar">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </span>
+            )}
+
+            {/* WhatsApp link */}
+            {contactoData.whatsappLink ? (
+              <a
+                href={contactoData.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-slate-800 hover:bg-green-600 p-2.5 rounded-full text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-115 flex items-center justify-center"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
+              </a>
+            ) : (
+              <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="WhatsApp por confirmar">
+                <MessageCircle size={20} />
+              </span>
+            )}
           </div>
         </div>
       </div>
