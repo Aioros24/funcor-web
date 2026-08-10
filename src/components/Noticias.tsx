@@ -2,6 +2,15 @@ import { Calendar, User, ArrowUpRight, Sparkles } from 'lucide-react';
 import noticiasData from '../data/noticias.json';
 
 export default function Noticias() {
+  // Helper to resolve absolute upload paths to relative paths for subfolder hosting (e.g. GitHub Pages)
+  const resolveImageUrl = (path: string) => {
+    if (!path) return '';
+    if (path.startsWith('/')) {
+      return path.substring(1);
+    }
+    return path;
+  };
+
   return (
     <section id="noticias" className="py-20 bg-rose-50/10 border-t border-rose-100/30">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -32,7 +41,7 @@ export default function Noticias() {
               <div className="aspect-video w-full relative overflow-hidden flex items-center justify-center text-rose-300 bg-gradient-to-br from-rose-50 to-pink-100">
                 {news.image ? (
                   <img
-                    src={news.image}
+                    src={resolveImageUrl(news.image)}
                     alt={news.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

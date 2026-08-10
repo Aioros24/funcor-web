@@ -38,6 +38,15 @@ export default function Hero() {
     setCurrentIdx(idx);
   };
 
+  // Helper to resolve absolute upload paths to relative paths for subfolder hosting (e.g. GitHub Pages)
+  const resolveImageUrl = (path: string) => {
+    if (!path) return '';
+    if (path.startsWith('/')) {
+      return path.substring(1);
+    }
+    return path;
+  };
+
   return (
     <section
       id="inicio"
@@ -117,7 +126,7 @@ export default function Hero() {
                     {slide.image ? (
                       <div
                         className="absolute inset-0 bg-cover bg-center -z-20 transition-transform duration-1000 transform scale-100 group-hover:scale-105"
-                        style={{ backgroundImage: `url(${slide.image})` }}
+                        style={{ backgroundImage: `url(${resolveImageUrl(slide.image)})` }}
                       />
                     ) : null}
 
