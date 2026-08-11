@@ -1,140 +1,116 @@
-import { Heart, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Heart, Phone, Mail, MapPin, Send, Ribbon } from 'lucide-react';
 import contactoData from '../data/contacto.json';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-rose-950/20">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-gradient-to-br from-brand-primary via-brand-secondary to-rose-600 text-white pt-20 pb-8 relative overflow-hidden border-t-4 border-white">
+      {/* Decorative vector background aura */}
+      <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -ml-24 -mb-24 w-96 h-96 bg-black/10 rounded-full blur-3xl pointer-events-none" />
 
-        {/* About column */}
-        <div className="flex flex-col space-y-4">
-          <div className="flex items-center gap-2">
-            <div className="bg-brand-secondary p-2 rounded-full">
-              <Heart className="text-white fill-white" size={20} />
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-left">
+
+        {/* Brand/About column */}
+        <div className="flex flex-col space-y-5">
+          <div className="flex items-center gap-2.5">
+            <div className="bg-white p-2.5 rounded-full flex items-center justify-center shadow-md">
+              <Ribbon className="text-brand-secondary" size={20} />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-bold text-lg text-white leading-tight uppercase">
-                FUNCOR
+              <span className="font-black text-lg text-white leading-tight uppercase tracking-tight">
+                FUN<span className="text-rose-200">COR</span>
               </span>
-              <span className="text-[9px] text-brand-secondary font-semibold uppercase tracking-wider leading-none">
-                Corazón Humanitario
+              <span className="text-[8px] text-rose-100 font-bold uppercase tracking-widest leading-none">
+                Un Nuevo Renacer
               </span>
             </div>
           </div>
-          <p className="text-sm text-slate-400 leading-relaxed text-justify">
-            La <strong>Fundación Corazón Humanitario – Un Nuevo Renacer (FUNCOR)</strong> es una organización sin fines de lucro en Venezuela, inspirada en brindar esperanza, solidaridad y apoyo integral a familias y personas en situación de vulnerabilidad social y de salud.
+          <p className="text-sm text-rose-50 leading-relaxed text-justify">
+            La <strong>Fundación Corazón Humanitario – Un Nuevo Renacer (FUNCOR)</strong> es una organización sin fines de lucro en Venezuela, dedicada a brindar acompañamiento integral y esperanza a personas con cáncer y sus familias.
+          </p>
+          <p className="text-xs font-semibold text-rose-200 italic">
+            "Transformamos vidas con amor y esperanza."
           </p>
         </div>
 
         {/* Navigation Quick Links */}
         <div>
-          <h4 className="text-white font-bold text-base mb-4 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-10 after:bg-brand-secondary pb-1 text-left">
+          <h4 className="text-white font-black text-base mb-6 relative after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-10 after:bg-white pb-2 uppercase tracking-wider">
             Enlaces Rápidos
           </h4>
-          <ul className="space-y-2 text-sm text-left">
+          <ul className="space-y-3.5 text-sm font-semibold">
             <li>
-              <a href="#inicio" className="hover:text-white hover:underline transition-colors">Inicio</a>
+              <a href="#inicio" className="text-rose-50 hover:text-white hover:underline transition-colors block">Inicio</a>
             </li>
             <li>
-              <a href="#nosotros" className="hover:text-white hover:underline transition-colors">Sobre Nosotros</a>
+              <a href="#nosotros" className="text-rose-50 hover:text-white hover:underline transition-colors block">Sobre Nosotros</a>
             </li>
             <li>
-              <a href="#que-hacemos" className="hover:text-white hover:underline transition-colors">Qué Hacemos</a>
+              <a href="#programas" className="text-rose-50 hover:text-white hover:underline transition-colors block">Nuestros Programas</a>
             </li>
             <li>
-              <a href="#testimonios" className="hover:text-white hover:underline transition-colors">Testimonios</a>
+              <a href="#testimonios" className="text-rose-50 hover:text-white hover:underline transition-colors block">Testimonios</a>
             </li>
             <li>
-              <a href="#noticias" className="hover:text-white hover:underline transition-colors">Noticias</a>
-            </li>
-            <li>
-              <a href="#como-ayudar" className="hover:text-white hover:underline transition-colors">Cómo Ayudar</a>
+              <a href="#noticias" className="text-rose-50 hover:text-white hover:underline transition-colors block">Noticias y Actividades</a>
             </li>
           </ul>
         </div>
 
-        {/* Contact Info */}
-        <div className="space-y-3">
-          <h4 className="text-white font-bold text-base mb-4 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-10 after:bg-brand-secondary pb-1 text-left">
-            Contacto
+        {/* Contact Info from the Flyer */}
+        <div className="space-y-4">
+          <h4 className="text-white font-black text-base mb-6 relative after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-10 after:bg-white pb-2 uppercase tracking-wider">
+            Contáctanos
           </h4>
-          <div className="flex items-start gap-2.5 text-sm">
-            <MapPin className="text-brand-secondary shrink-0 mt-1" size={18} />
-            <span className="text-left">{contactoData.address}</span>
+          <div className="flex items-start gap-3 text-sm">
+            <MapPin className="text-rose-200 shrink-0 mt-1" size={18} />
+            <span className="text-rose-50 leading-relaxed">{contactoData.address}</span>
           </div>
-          <div className="flex items-center gap-2.5 text-sm">
-            <Phone className="text-brand-secondary shrink-0" size={18} />
-            <span className="text-slate-400 font-semibold">{contactoData.phone}</span>
+          <div className="flex items-center gap-3 text-sm font-bold">
+            <Phone className="text-rose-200 shrink-0" size={18} />
+            <span className="text-rose-50">{contactoData.phone}</span>
           </div>
-          <div className="flex items-center gap-2.5 text-sm">
-            <Mail className="text-brand-secondary shrink-0" size={18} />
-            <span className="text-slate-400 font-semibold break-all">{contactoData.email}</span>
+          <div className="flex items-center gap-3 text-sm font-bold">
+            <Mail className="text-rose-200 shrink-0" size={18} />
+            <span className="text-rose-50 break-all">{contactoData.email}</span>
           </div>
         </div>
 
-        {/* Social Networks & Messaging */}
+        {/* Newsletter Subscription field styled exactly like the flyer footer */}
         <div className="flex flex-col space-y-4">
-          <h4 className="text-white font-bold text-base mb-1 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-10 after:bg-brand-secondary pb-1 text-left">
-            Redes Sociales
+          <h4 className="text-white font-black text-base mb-2 relative after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-10 after:bg-white pb-2 uppercase tracking-wider">
+            Suscríbete
           </h4>
-          <p className="text-sm text-slate-400 text-left">
-            Acompáñanos y sigue la labor diaria de nuestra fundación. <span className="text-xs text-slate-500 block italic mt-1">(Enlaces oficiales por confirmar)</span>
+          <p className="text-xs text-rose-100 leading-relaxed">
+            Recibe noticias, actividades y novedades de nuestra fundación.
           </p>
-          <div className="flex items-center gap-3">
-            {/* Instagram link */}
-            {contactoData.instagramLink ? (
-              <a
-                href={contactoData.instagramLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-slate-800 hover:bg-gradient-to-tr hover:from-yellow-500 hover:via-pink-500 hover:to-purple-600 p-2.5 rounded-full text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-115 flex items-center justify-center"
-                aria-label="Instagram"
-              >
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                </svg>
-              </a>
-            ) : (
-              <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="Instagram por confirmar">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                </svg>
-              </span>
-            )}
 
-            {/* WhatsApp link */}
-            {contactoData.whatsappLink ? (
-              <a
-                href={contactoData.whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-slate-800 hover:bg-green-600 p-2.5 rounded-full text-slate-300 hover:text-white transition-all duration-300 transform hover:scale-115 flex items-center justify-center"
-                aria-label="WhatsApp"
-              >
-                <MessageCircle size={20} />
-              </a>
-            ) : (
-              <span className="bg-slate-800 p-2.5 rounded-full text-slate-500 cursor-not-allowed flex items-center justify-center" title="WhatsApp por confirmar">
-                <MessageCircle size={20} />
-              </span>
-            )}
+          {/* Email input field with send button as seen in the flyer */}
+          <div className="relative w-full max-w-[280px]">
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              className="w-full bg-white/10 border border-white/20 focus:border-white focus:bg-white/15 focus:outline-none rounded-full py-3 px-5 pr-12 text-xs text-white placeholder-rose-200/80 transition-all font-semibold"
+            />
+            <button
+              className="absolute right-1 top-1 bg-white hover:bg-rose-50 text-brand-secondary p-2 rounded-full shadow-md transition-all duration-300 flex items-center justify-center"
+              aria-label="Suscribirme"
+            >
+              <Send size={12} className="fill-brand-secondary stroke-[2.5]" />
+            </button>
           </div>
         </div>
       </div>
 
       {/* Footer bottom */}
-      <div className="border-t border-slate-900 pt-8 mt-8 text-center text-xs text-slate-500 px-4">
-        <p className="mb-2">
+      <div className="border-t border-white/15 pt-8 mt-8 text-center text-xs text-rose-100/70 px-4 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>
           &copy; {currentYear} Fundación Corazón Humanitario – Un Nuevo Renacer (FUNCOR). Todos los derechos reservados.
         </p>
-        <p>
-          RIF: <span className="font-semibold italic">[Por confirmar]</span> | Organismo sin fines de lucro en proceso de registro definitivo en Caracas, Venezuela.
+        <p className="text-[10px]">
+          RIF: <span className="font-bold italic">[Por confirmar]</span> | Diseñado con <Heart size={10} className="inline fill-white text-white mx-0.5" /> para servir.
         </p>
       </div>
     </footer>

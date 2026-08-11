@@ -1,12 +1,16 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Valores from './components/Valores';
 import Nosotros from './components/Nosotros';
 import Programas from './components/Programas';
+import Frase from './components/Frase';
+import Estadisticas from './components/Estadisticas';
 import Testimonios from './components/Testimonios';
 import Noticias from './components/Noticias';
 import Donaciones from './components/Donaciones';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
+import CTA from './components/CTA';
 
 function App() {
   return (
@@ -19,19 +23,31 @@ function App() {
         {/* Sección de Bienvenida (Hero) */}
         <Hero />
 
+        {/* Tarjetas de Valores superiores */}
+        <Valores />
+
         {/* Sección Sobre Nosotros */}
         <Nosotros />
 
-        {/* Sección Qué Hacemos */}
+        {/* Sección Qué Hacemos (Programas) */}
         <Programas />
+
+        {/* Frase Inspiradora Banner */}
+        <Frase />
+
+        {/* Sección Estadísticas */}
+        <Estadisticas />
+
+        {/* Sección Noticias ("Mantente Informado" con categoría badges) */}
+        <Noticias />
 
         {/* Sección Testimonios */}
         <Testimonios />
 
-        {/* Sección Noticias */}
-        <Noticias />
+        {/* Sección de Llamado a la Acción final (CTA) */}
+        <CTA />
 
-        {/* Sección Cómo Ayudar */}
+        {/* Sección Cómo Ayudar (Donaciones) */}
         <Donaciones />
 
         {/* Sección Contacto */}
