@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Aioros24/funcor-web
   branch: jules-7279241334177608037-bdd4b901
-  base_url: https://api.decapcms.org
+  base_url: https://funcor-cms-auth.vercel.app
 
 media_folder: public/assets/uploads
 public_folder: /assets/uploads
