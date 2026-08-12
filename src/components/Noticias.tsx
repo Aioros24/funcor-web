@@ -1,30 +1,8 @@
-import { User, ArrowUpRight } from 'lucide-react';
+import { Calendar, User, ArrowUpRight, Sparkles } from 'lucide-react';
 import noticiasData from '../data/noticias.json';
 
 export default function Noticias() {
-  const getBadgeStyles = (tag: string) => {
-    switch (tag.toLowerCase()) {
-      case 'noticia':
-        return 'bg-brand-secondary text-white';
-      case 'evento':
-        return 'bg-purple-600 text-white';
-      case 'testimonio':
-        return 'bg-teal-500 text-white';
-      default:
-        return 'bg-brand-primary text-white';
-    }
-  };
-
-  const getFallbackImage = (title: string) => {
-    if (title.toLowerCase().includes('medicamentos')) {
-      return 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=400';
-    }
-    if (title.toLowerCase().includes('valientes')) {
-      return 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=400';
-    }
-    return 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=400';
-  };
-
+  // Helper to resolve absolute upload paths to relative paths for subfolder hosting (e.g. GitHub Pages)
   const resolveImageUrl = (path: string) => {
     if (!path) return '';
     if (path.startsWith('/')) {
@@ -37,13 +15,13 @@ export default function Noticias() {
     <section id="noticias" className="py-20 bg-rose-50/10 border-t border-rose-100/30">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
-        {/* Section Heading from the Flyer */}
+        {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-rose-50 px-3.5 py-1.5 rounded-full border border-rose-100">
-            NOTICIAS Y ACTIVIDADES
-          </span>
-          <h2 className="text-3xl md:text-4.5xl font-black text-brand-primary mt-3 mb-4">
             {noticiasData.sectionTitle}
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-brand-primary mt-3 mb-4">
+            Boletín Informativo y Novedades
           </h2>
           <div className="h-1.5 w-20 bg-brand-secondary mx-auto rounded-full mb-6" />
           <p className="text-slate-600 text-base">
@@ -51,24 +29,27 @@ export default function Noticias() {
           </p>
         </div>
 
-        {/* News Grid exactly matching the cards of the flyer */}
+        {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {noticiasData.newsList.map((news, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[32px] overflow-hidden border border-rose-100/40 hover:border-brand-secondary/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-3xl overflow-hidden border border-rose-100/40 hover:border-brand-secondary/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
 
-              {/* Card Header with Category Badge and Image */}
-              <div className="aspect-[4/3] w-full relative overflow-hidden flex items-center justify-center text-rose-300 bg-rose-50">
-                <img
-                  src={news.image ? resolveImageUrl(news.image) : getFallbackImage(news.title)}
-                  alt={news.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              {/* Card Header Media Placeholder or Real Image */}
+              <div className="aspect-video w-full relative overflow-hidden flex items-center justify-center text-rose-300 bg-gradient-to-br from-rose-50 to-pink-100">
+                {news.image ? (
+                  <img
+                    src={resolveImageUrl(news.image)}
+                    alt={news.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <Sparkles size={36} className="text-brand-accent/50 group-hover:scale-110 transition-transform duration-300" />
+                )}
 
-                {/* Floating category badge styled like the flyer */}
-                <span className={`absolute bottom-4 left-4 text-[10px] font-bold px-3 py-1.5 rounded-xl uppercase tracking-wider z-10 shadow-sm ${getBadgeStyles(news.tag)}`}>
+                <span className="absolute bottom-3 left-3 bg-white/90 text-brand-secondary text-[10px] font-bold px-2 py-0.5 rounded-md uppercase border border-rose-50 z-10 shadow-sm">
                   {news.tag}
                 </span>
               </div>
@@ -77,10 +58,10 @@ export default function Noticias() {
               <div className="p-6 text-left flex-grow flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-4 text-xs text-slate-400 mb-3">
-                    <span className="flex items-center gap-1 font-semibold text-brand-secondary">
-                      {news.date}
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} /> {news.date}
                     </span>
-                    <span className="flex items-center gap-1 font-medium text-slate-500">
+                    <span className="flex items-center gap-1">
                       <User size={12} /> {news.author}
                     </span>
                   </div>
@@ -94,23 +75,13 @@ export default function Noticias() {
                   </p>
                 </div>
 
-                <div className="inline-flex items-center gap-1 text-xs font-bold text-brand-secondary hover:text-brand-primary cursor-pointer border-t border-rose-100/30 pt-4 w-full transition-colors">
-                  Leer más <ArrowUpRight size={14} />
+                <div className="inline-flex items-center gap-1 text-xs font-bold text-slate-400 cursor-not-allowed border-t border-rose-100/30 pt-4 w-full">
+                  Próximamente disponible <ArrowUpRight size={14} />
                 </div>
               </div>
 
             </div>
           ))}
-        </div>
-
-        {/* View all news button from the flyer */}
-        <div className="text-center pt-12">
-          <a
-            href="#contacto"
-            className="inline-flex items-center justify-center bg-brand-secondary hover:bg-brand-primary text-white font-extrabold text-center px-8 py-3.5 rounded-full shadow-lg shadow-pink-100 transition-all duration-300 hover:scale-105 uppercase text-xs tracking-wider"
-          >
-            Ver todas las noticias
-          </a>
         </div>
 
       </div>

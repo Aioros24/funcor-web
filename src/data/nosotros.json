@@ -1,13 +1,23 @@
 {
   "sectionTitle": "Sobre Nosotros",
-  "sectionDesc": "Un Nuevo Renacer es Posible",
-  "description": "Somos una fundación sin fines de lucro que trabaja con amor para apoyar a personas con cáncer y sus familias, brindando ayuda humanitaria, acompañamiento y esperanza.",
-  "bulletPoints": [
-    "Creemos en la vida",
-    "Creemos en el amor al prójimo",
-    "Creemos en los nuevos comienzos"
-  ],
-  "buttonText": "CONÓCENOS MÁS",
-  "buttonLink": "#nosotros",
-  "image": ""
+  "description": "Nuestra organización nace de la vocación de servicio y el compromiso de brindar apoyo humanitario integral. Creemos firmemente que el bienestar, la solidaridad y el amor al prójimo son pilares fundamentales para acompañar a las personas más vulnerables en Venezuela, promoviendo el desarrollo y propiciando un nuevo renacer en sus vidas.",
+  "misionTitle": "Nuestra Misión",
+  "misionContent": "Brindar asistencia humanitaria y de acompañamiento integral en áreas fundamentales como alimentación y nutrición, orientación básica de salud y educación. Trabajamos para devolverle a cada persona la dignidad, el apoyo social y la esperanza de un nuevo renacer.",
+  "visionTitle": "Nuestra Visión",
+  "visionContent": "Consolidarnos como un canal de solidaridad y transparencia de alto impacto en Venezuela. Aspiramos a estructurar programas formativos de acompañamiento y redes de apoyo comunitario que permitan a las familias desarrollar habilidades sostenibles y fortalecer su bienestar social y humano.",
+  "valuesTitle": "Nuestros Valores Fundacionales",
+  "valuesList": [
+    {
+      "title": "Transparencia",
+      "desc": "Administramos cada recurso de forma honesta, rindiendo cuentas claras y precisas cuando la fundación publique oficialmente sus datos y operaciones."
+    },
+    {
+      "title": "Empatía y Amor",
+      "desc": "Nuestra motivación nace desde el corazón, inspirados en el lazo rosado de la ayuda y la solidaridad para aliviar la vulnerabilidad social."
+    },
+    {
+      "title": "Compromiso Humano",
+      "desc": "Asumimos la labor social con total responsabilidad, adaptando cada actividad a las necesidades prioritarias del entorno venezolano."
+    }
+  ]
 }

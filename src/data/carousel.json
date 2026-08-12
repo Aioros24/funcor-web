@@ -3,19 +3,28 @@
     {
       "id": "slide-1",
       "image": "",
-      "title": "Transformamos vidas con amor y esperanza",
-      "description": "Acompañamos a personas con cáncer y sus familias, brindando apoyo integral para un nuevo renacer.",
-      "buttonText": "CONOCE MÁS",
-      "buttonLink": "#nosotros",
+      "title": "Un Nuevo Renacer con Esperanza y Solidaridad",
+      "description": "Acompañamos a personas y familias afectadas por el cáncer en Venezuela, brindando apoyo social, humano e integral en su camino.",
+      "buttonText": "Cómo Ayudar",
+      "buttonLink": "#como-ayudar",
       "active": true
     },
     {
       "id": "slide-2",
       "image": "",
       "title": "Unidos por la Vida y el Bienestar",
-      "description": "Inspirados en el lazo rosado de la concientización, el acompañamiento humano y el soporte emocional activo.",
-      "buttonText": "CÓMO AYUDAR",
-      "buttonLink": "#como-ayudar",
+      "description": "Inspirados en el lazo rosado, promovemos la concientización, el acompañamiento humano y el soporte emocional activo.",
+      "buttonText": "Sobre Nosotros",
+      "buttonLink": "#nosotros",
+      "active": true
+    },
+    {
+      "id": "slide-3",
+      "image": "",
+      "title": "Tus Manos Construyen Caminos de Esperanza",
+      "description": "Súmate como voluntario o colaborador y forma parte de la red de solidaridad que brinda un nuevo comienzo a quienes más lo necesitan.",
+      "buttonText": "Contáctanos",
+      "buttonLink": "#contacto",
       "active": true
     }
   ]

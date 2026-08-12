@@ -1,38 +1,30 @@
 {
-  "sectionTitle": "NUESTROS PROGRAMAS",
-  "sectionDesc": "Estamos Aquí Para Ayudar",
+  "sectionTitle": "Qué Hacemos",
+  "sectionDesc": "Cada una de nuestras actividades está orientada a aliviar la vulnerabilidad mediante soluciones de soporte social y acompañamiento humano responsable.",
   "programsList": [
     {
-      "title": "Apoyo Psicológico",
-      "subtitle": "Acompañamiento Emocional",
-      "desc": "Brindamos acompañamiento emocional para pacientes y familiares, fortaleciendo su mente en cada paso.",
-      "image": "",
-      "icon": "HeartPulse",
-      "link": "#contacto"
+      "title": "Alimentación y Nutrición",
+      "subtitle": "Apoyo Nutricional",
+      "desc": "Colaboramos en jornadas comunitarias de alimentación y canalización de insumos nutricionales para mitigar la vulnerabilidad en niños y adultos mayores.",
+      "impact": "[Cifra por confirmar - Impacto en proceso de registro]"
     },
     {
-      "title": "Ayuda Humanitaria",
-      "subtitle": "Medicamentos y Nutrición",
-      "desc": "Distribuimos medicamentos, alimentos, insumos médicos y más para mitigar la vulnerabilidad.",
-      "image": "",
-      "icon": "Gift",
-      "link": "#como-ayudar"
+      "title": "Acompañamiento en Salud",
+      "subtitle": "Orientación y Bienestar",
+      "desc": "Brindamos orientación básica de salud, acompañamiento social a personas enfermas y canalización para la donación de insumos básicos. Es un programa de apoyo humanitario complementario que no sustituye tratamientos médicos profesionales.",
+      "impact": "[Consultas y medicamentos por confirmar]"
     },
     {
-      "title": "Grupos de Apoyo",
-      "subtitle": "Compartiendo de Corazón",
-      "desc": "Espacios de contención y fe para compartir testimonios, orar y fortalecer el corazón colectivamente.",
-      "image": "",
-      "icon": "Heart",
-      "link": "#contacto"
+      "title": "Formación y Educación",
+      "subtitle": "Sembrando Conocimiento",
+      "desc": "Desarrollamos talleres de apoyo escolar, actividades recreativas para el fomento de valores y fortalecimiento de habilidades para incentivar el sano crecimiento.",
+      "impact": "[Beneficiarios por confirmar]"
     },
     {
-      "title": "Acompañamiento Espiritual",
-      "subtitle": "Palabras de Aliento",
-      "desc": "Oración, consejería y palabras de aliento para cada etapa, promoviendo la fe y el amor al prójimo.",
-      "image": "",
-      "icon": "Sparkles",
-      "link": "#contacto"
+      "title": "Fortalecimiento Familiar",
+      "subtitle": "Solidaridad Familiar",
+      "desc": "Fomentamos el empoderamiento personal de padres y madres de familia en las comunidades mediante talleres informativos y apoyo grupal.",
+      "impact": "[Familias por confirmar]"
     }
   ]
 }

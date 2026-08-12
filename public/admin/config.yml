@@ -83,7 +83,10 @@ collections:
           - label: "Puntos Clave / Principios"
             name: "bulletPoints"
             widget: "list"
-            field: { label: "Principio", widget: "string" }
+            field:
+              label: "Principio"
+              name: "value"
+              widget: "string"
           - label: "Texto del Botón"
             name: "buttonText"
             widget: "string"
@@ -242,7 +245,7 @@ collections:
             widget: "string"
           - label: "Subtítulo"
             name: "subtitle"
-            widget: "string"
+            widget: "text"
           - label: "Arreglo de Opciones"
             name: "actionsList"
             widget: "list"
