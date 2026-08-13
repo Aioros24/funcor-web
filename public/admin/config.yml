@@ -2,7 +2,9 @@ backend:
   name: github
   repo: Aioros24/funcor-web
   branch: jules-7279241334177608037-bdd4b901
-  base_url: https://funcor-cms-auth.vercel.app
+  # La base_url se sobreescribe dinámicamente en index.html cuando se accede desde Vercel.
+  # Para despliegues locales u otros entornos, se puede modificar este valor o depender del script dinámico.
+  base_url: https://your-vercel-domain.vercel.app/api
 
 media_folder: public/assets/uploads
 public_folder: /assets/uploads

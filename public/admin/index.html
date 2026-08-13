@@ -6,7 +6,37 @@
   <title>Panel de Administración - FUNCOR</title>
 </head>
 <body>
-  <!-- Include Decap CMS (Placed at the bottom of the body so that document.body is fully parsed before initialization) -->
+  <!-- Configure Manual Initialization for Decap CMS to dynamically set base_url in production -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
+  <!-- Include Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Initialize CMS with dynamically detected base_url if deployed on Vercel or custom domain -->
+  <script>
+    (function() {
+      // Check current host
+      const host = window.location.host;
+      let calculatedBaseUrl = 'https://your-vercel-domain.vercel.app/api';
+
+      // If we are on Vercel, we can dynamically build the API path using the current host!
+      if (host.includes('vercel.app')) {
+        calculatedBaseUrl = window.location.protocol + '//' + host + '/api';
+      } else if (host.includes('localhost') || host.includes('127.0.0.1')) {
+        // Fallback or local dev
+        calculatedBaseUrl = window.location.protocol + '//' + host + '/api';
+      }
+
+      window.initCMS({
+        config: {
+          backend: {
+            base_url: calculatedBaseUrl
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
